@@ -16,14 +16,14 @@ function testUserCanAdoptPet() public {
   Assert.equal(returnedId, expected, "Error: Adoption of petId 8 should be recorded.");
 }
 
-function testGetAdopterAddressByPetId(uint petId) public {
+function testGetAdopterAddressByPetId() public {
   address expected = this;
   address adopter = adoption.adopters(8);
 
   Assert.equal(adopter, expected, "Error: Owner of petId 8 should be recorded.");
 }
 
-function testGetAdopterAddressByPetIdInArray(uint petId) public {
+function testGetAdopterAddressByPetIdInArray() public {
   address expected = this;
 
   address[16] memory adopters = adoption.getAdopters();
